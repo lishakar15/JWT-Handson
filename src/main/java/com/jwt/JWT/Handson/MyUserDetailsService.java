@@ -13,7 +13,7 @@ public class MyUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserDetails userDetails = User.withUsername("Lisha")
                 .password( new BCryptPasswordEncoder().encode("Lisha@123"))
-                .roles("ADMIN")
+                //.roles("ADMIN")
                 .build();
         return userDetails;
     }
